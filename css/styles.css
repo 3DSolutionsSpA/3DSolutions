@@ -1,1 +1,182 @@
+/* Reseteo ligero */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía global */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 1rem 2rem;
+}
+.navbar .logo img {
+  height: 40px;
+  vertical-align: middle;
+}
+.navbar .logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin-left: 1.5rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero / Cabecera en landing */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
+}
+.hero-text {
+  flex: 1 1 300px;
+  margin-right: 2rem;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #005bb5;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Sección “Quiénes somos” */
+.about {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Proyectos / Galería */
+.projects {
+  padding: 2rem;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.project-card img {
+  width: 100%;
+  display: block;
+}
+.project-card h3 {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+}
+.project-card p {
+  padding: 0 1rem 1rem;
+  color: #555;
+}
+.catalog-download {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Contacto */
+.contacto {
+  padding: 2rem;
+}
+.contact-info {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+.form-contact {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.form-contact label {
+  margin-top: 0.8rem;
+}
+.form-contact input,
+.form-contact textarea {
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-contact button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-contact button:hover {
+  background-color: #005bb5;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-text {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
 
