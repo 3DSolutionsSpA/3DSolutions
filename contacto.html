@@ -4,53 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto - 3D Solutions</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Logo 3D Solutions" />
-      3D Solutions
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="proyectos.html">Proyectos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+  <!-- ==========================
+       1. HEADER / NAVBAR
+       ========================== -->
+  <header>
+    <nav class="nav-wrapper container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="3D Solutions Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Información de contacto -->
-  <section class="contacto">
-    <h2>Contáctanos</h2>
-    <p>¿Tienes un proyecto en mente? Escríbenos o llámanos:</p>
+  <!-- ==========================
+       2. HERO / TÍTULO DE PÁGINA
+       ========================== -->
+  <section id="contacto-hero">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <p>Estamos a tu disposición para cotizaciones y consultas. ¡Escríbenos!</p>
+    </div>
+  </section>
 
-    <ul class="contact-info">
+  <!-- ==========================
+       3. DATOS DE CONTACTO + FORMULARIO
+       ========================== -->
+  <section class="container">
+    <!-- Información de la empresa -->
+    <ul class="contacto-info">
       <li><strong>Dirección:</strong> Av. Principal 123, Santiago, Chile</li>
       <li><strong>Teléfono:</strong> +56 9 1234 5678</li>
       <li><strong>Email:</strong> <a href="mailto:contacto@3dsolutions.cl">contacto@3dsolutions.cl</a></li>
     </ul>
 
-    <!-- Formulario de contacto (opcional, usa Formspree o mailto) -->
-    <h3>Escríbenos un mensaje</h3>
-    <form action="https://formspree.io/f/tuIDdeFormspree" method="POST" class="form-contact">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required />
+    <!-- Formulario de contacto con Formspree -->
+    <div class="contact-form-wrapper">
+      <!-- 
+        1) Reemplaza 'TU_ID_DE_FORMSPREE' por el ID que te entrega Formspree.
+        2) Para obtenerlo, sigue la breve guía que aparece abajo en este archivo.
+      -->
+      <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
-      <label for="message">Mensaje:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-    <!-- Si no quieres usar Formspree, cambia `action="mailto:..."` o simplemente omite el form -->
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
   </section>
 
-  <footer class="footer">
+  <!-- ==========================
+       4. FOOTER
+       ========================== -->
+  <footer>
     <p>© 2025 3D Solutions Chile. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- No es necesario JS en esta página salvo validaciones custom -->
 </body>
 </html>
-

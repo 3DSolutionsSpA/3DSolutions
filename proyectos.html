@@ -4,54 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyectos - 3D Solutions</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Mismo navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Logo 3D Solutions" />
-      3D Solutions
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="proyectos.html">Proyectos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <!-- Contenido de proyectos -->
-  <section class="projects">
-    <h2>Nuestros Proyectos</h2>
-    <p>A continuación, algunos ejemplos de trabajos realizados:</p>
-
-    <div class="project-grid">
-      <!-- Proyecto 1 -->
-      <div class="project-card">
-        <img src="images/proyecto1.jpg" alt="Proyecto 1" />
-        <h3>Prototipo Mecánico</h3>
-        <p>Diseño y fabricación de piezas para industria automotriz.</p>
+  <!-- ==========================
+       1. HEADER / NAVBAR
+       ========================== -->
+  <header>
+    <nav class="nav-wrapper container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="3D Solutions Logo" />
+        </a>
       </div>
-      <!-- Proyecto 2 -->
-      <div class="project-card">
-        <img src="images/proyecto2.jpg" alt="Proyecto 2" />
-        <h3>Modelos arquitectónicos</h3>
-        <p>Maquetas detalladas para presentación de proyectos inmobiliarios.</p>
-      </div>
-      <!-- Agrega más cards según tus proyectos -->
-    </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html" class="active">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Catálogo descargable -->
-    <div class="catalog-download">
-      <h3>Descarga nuestro catálogo completo</h3>
-      <a href="docs/catalogo-3dsolutions.pdf" class="btn">Descargar PDF</a>
-      <!-- Nota: coloca el PDF en carpeta `/docs/catalogo-3dsolutions.pdf` si lo tienes -->
+  <!-- ==========================
+       2. HERO / TÍTULO DE PÁGINA
+       ========================== -->
+  <section id="proyectos-hero">
+    <div class="container">
+      <h2>Proyectos Destacados</h2>
+      <p>Estos son algunos de los trabajos que hemos realizado. Descarga nuestro catálogo completo en PDF al final.</p>
     </div>
   </section>
 
-  <footer class="footer">
+  <!-- ==========================
+       3. GRID DE PROYECTOS
+       ========================== -->
+  <section class="container">
+    <div class="proyectos-grid">
+      <!-- ======= Proyecto 1 ======= -->
+      <div class="proyecto-card">
+        <img src="images/proyecto1.jpg" alt="Proyecto 1" />
+        <div class="card-body">
+          <h3>Prototipado Mecánico</h3>
+          <p>Fabricación de piezas funcionales para industria automotriz.</p>
+          <a href="docs/catalogo-3dsolutions.pdf" class="btn-descarga" download>Descargar Catálogo</a>
+        </div>
+      </div>
+      <!-- ======= Proyecto 2 ======= -->
+      <div class="proyecto-card">
+        <img src="images/proyecto2.jpg" alt="Proyecto 2" />
+        <div class="card-body">
+          <h3>Modelos Arquitectónicos</h3>
+          <p>Maquetas detalladas para proyectos inmobiliarios de alto nivel.</p>
+          <a href="docs/catalogo-3dsolutions.pdf" class="btn-descarga" download>Descargar Catálogo</a>
+        </div>
+      </div>
+      <!-- ======= Proyecto 3 ======= -->
+      <div class="proyecto-card">
+        <img src="images/proyecto3.jpg" alt="Proyecto 3" />
+        <div class="card-body">
+          <h3>Piezas de Ingeniería</h3>
+          <p>Diseño y fabricación de componentes personalizados para maquinaria.</p>
+          <a href="docs/catalogo-3dsolutions.pdf" class="btn-descarga" download>Descargar Catálogo</a>
+        </div>
+      </div>
+      <!-- Puedes duplicar y ajustar estos bloques para más proyectos -->
+    </div>
+
+    <!-- ======= Enlace de descarga general (opcional) ======= -->
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="docs/catalogo-3dsolutions.pdf" class="btn-descarga" download>
+        Descargar Catálogo Completo en PDF
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================
+       4. FOOTER
+       ========================== -->
+  <footer>
     <p>© 2025 3D Solutions Chile. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- ==========================
+       5. JS (si en proyectos no hay carrusel, no se necesita script aquí)
+       ========================== -->
+  <!-- Si no necesitas carrusel en esta página, puedes omitir el <script> -->
+  <!-- <script src="js/scripts.js"></script> -->
 </body>
 </html>
-

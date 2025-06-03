@@ -3,52 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3D Solutions Chile</title>
+  <title>3D Solutions - Impresión 3D en Chile</title>
+  <!-- Enlace a Google Fonts (Montserrat + Roboto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Enlace a los estilos -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Logo 3D Solutions" />
-      3D Solutions
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="proyectos.html">Proyectos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
 
-  <!-- Sección principal -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Impresión 3D de alta calidad en Chile</h1>
-      <p>
-        En <strong>3D Solutions</strong> nos especializamos en transformar tus ideas en piezas tangibles. 
-        Servicios de prototipado, producción de bajo volumen y diseños personalizados.
-      </p>
-      <a href="proyectos.html" class="btn">Ver Proyectos</a>
-    </div>
-    <div class="hero-image">
-      <img src="images/proyecto1.jpg" alt="Ejemplo impresión 3D" />
-    </div>
+  <!-- ==========================
+       1. HEADER / NAVBAR
+       ========================== -->
+  <header>
+    <nav class="nav-wrapper container">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="3D Solutions Logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Sección “Quiénes somos” -->
-  <section id="about" class="about">
-    <h2>Quiénes Somos</h2>
-    <p>
-      Somos un equipo de ingenieros y diseñadores ubicados en Santiago de Chile, 
-      apasionados por la impresión 3D. Utilizamos tecnología FDM, SLA y SLS para 
-      ofrecer piezas con acabado profesional, materiales biocompatibles y plásticos de ingeniería.
-    </p>
+  <!-- ==========================
+       2. HERO / CARRUSEL PRINCIPAL
+       ========================== -->
+  <section id="hero">
+    <div class="hero-carousel">
+      <!-- 
+           Coloca aquí tus 3 imágenes de carrusel. 
+           Ejemplo de nombres: carousel1.jpg, carousel2.jpg, carousel3.jpg 
+      -->
+      <img src="images/carousel1.jpg" alt="Slide 1" class="active" />
+      <img src="images/carousel2.jpg" alt="Slide 2" />
+      <img src="images/carousel3.jpg" alt="Slide 3" />
+    </div>
+
+    <div class="hero-content">
+      <h1>Soluciones de Impresión 3D de Vanguardia</h1>
+      <p>
+        En <strong>3D Solutions</strong> ofrecemos servicios de impresión 3D en Chile con filamentos
+        biodegradables, compostables y reciclables. Nuestro enfoque es 100% personalizado y de alta calidad.
+      </p>
+      <a href="proyectos.html" class="btn-primario">Ver Proyectos</a>
+    </div>
   </section>
 
-  <!-- Pie de página -->
-  <footer class="footer">
+  <!-- ==========================
+       3. CINTA CARRUSEL DE LOGOS
+       ========================== -->
+  <section id="logos">
+    <div class="container">
+      <div class="logos-container">
+        <div class="logos-slider">
+          <!-- Agrega aquí tus 5 logos. Ejemplo: logos/logo1.png, logo2.png, etc. -->
+          <img src="images/logos/logo1.png" alt="Empresa Colaboradora 1" />
+          <img src="images/logos/logo2.png" alt="Empresa Colaboradora 2" />
+          <img src="images/logos/logo3.png" alt="Empresa Colaboradora 3" />
+          <img src="images/logos/logo4.png" alt="Empresa Colaboradora 4" />
+          <img src="images/logos/logo5.png" alt="Empresa Colaboradora 5" />
+          <!-- Si más adelante agregas más logos, repítelos aquí para que la animación sea continua -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================
+       4. SECCIÓN DE CARACTERÍSTICAS
+       ========================== -->
+  <section id="features" class="container">
+    <div class="features-container">
+      <div class="feature-card">
+        <h3>Filamentos Biodegradables</h3>
+        <p>
+          Utilizamos materiales de última generación que se degradan de forma natural, cuidando el medio ambiente.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>Filamentos Compostables</h3>
+        <p>
+          Opciones compostables para proyectos eco‐friendly, ideales para prototipos con bajo impacto.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>Filamentos Reciclables</h3>
+        <p>
+          Nuestro compromiso es reducir residuos: trabajamos con plásticos reciclados de alta calidad.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>Trabajos Personalizados</h3>
+        <p>
+          Modelos a medida, ajustes detallados y acabados profesionales según tus necesidades.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>Calidad Garantizada</h3>
+        <p>
+          Contamos con impresoras de última generación y personal altamente capacitado para resultados impecables.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================
+       5. CARRUSEL DE PROYECTOS (PESTAÑA HOME)
+       ========================== -->
+  <section id="project-carousel">
+    <div class="container">
+      <h2 style="text-align: center; color: var(--color-primario-azul); margin-bottom: 1rem;">
+        Algunos Proyectos Destacados
+      </h2>
+      <div class="project-carousel-wrapper">
+        <!-- Agrega aquí las mismas imágenes (o una selección) de la carpeta "images/" -->
+        <img src="images/proyecto1.jpg" alt="Proyecto 1" class="active" />
+        <img src="images/proyecto2.jpg" alt="Proyecto 2" />
+        <img src="images/proyecto3.jpg" alt="Proyecto 3" />
+      </div>
+      <div id="contact-link-home">
+        <a href="contacto.html">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================
+       6. FOOTER
+       ========================== -->
+  <footer>
     <p>© 2025 3D Solutions Chile. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- ==========================
+       7. SCRIPT CARRUSELES
+       ========================== -->
+  <script src="js/scripts.js"></script>
 </body>
 </html>
-
