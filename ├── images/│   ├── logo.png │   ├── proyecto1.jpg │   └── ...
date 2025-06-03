@@ -1,0 +1,11 @@
+/3dsolutions-site
+├── index.html            ← Landing page (descripción de la empresa)
+├── proyectos.html        ← Página que muestra proyectos y catálogos
+├── contacto.html         ← Página de contacto
+├── css/
+│   └── styles.css        ← Estilos globales
+├── images/
+│   ├── logo.png
+│   ├── proyecto1.jpg
+│   └── ...
+└── CNAME                 ← Archivo para apuntar dominio personalizado
