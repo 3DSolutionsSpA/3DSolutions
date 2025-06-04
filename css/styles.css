@@ -586,3 +586,96 @@ footer {
     flex: 1 1 auto;
   }
 }
+
+/* ==================================================
+   Menú hamburguesa responsive
+   ================================================== */
+
+/* 1) Estilos base para el botón hamburguesa */
+.nav-toggle {
+  display: none; /* se mostrará solo en móvil */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle:focus {
+  outline: none;
+}
+
+.hamburger {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-texto);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 2) Ocultar enlaces por defecto en móvil */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px; /* debajo del header fijo */
+    right: 0;
+    background-color: var(--color-fondo);
+    width: 200px;
+    transform: translateX(100%); /* fuera de la pantalla a la derecha */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 0 8px;
+    z-index: 1001;
+  }
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .nav-links li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--color-texto);
+    font-size: 1rem;
+  }
+
+  /* Mostrar el botón hamburguesa */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Cuando el menú esté “activo” (clase .nav-open en <nav>), desliza hacia la izquierda */
+  .nav-open .nav-links {
+    transform: translateX(0);
+  }
+
+  /* Animación icono: al abrirse, cruzar líneas */
+  .nav-open .hamburger:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .nav-open .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-open .hamburger:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+/* En desktop, dejamos todo visible y el botón oculto */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    position: static;
+    transform: none !important;
+    box-shadow: none;
+    background: none;
+    width: auto;
+  }
+  .nav-links li {
+    margin: 0;
+  }
+}

@@ -56,3 +56,25 @@ document.addEventListener('DOMContentLoaded', function () {
   // Nota: la animación @keyframes scrollLogos en CSS desplaza automáticamente.
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  // … (carruseles u otro código que ya tengas)
+
+  // 3.1. Toggle menú hamburguesa
+  const nav = document.querySelector('nav.nav-wrapper');
+  const toggleButton = document.querySelector('.nav-toggle');
+
+  toggleButton.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
+  });
+
+  // Cerrar menú al hacer clic en un enlace (solo en móvil)
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (nav.classList.contains('nav-open')) {
+        nav.classList.remove('nav-open');
+      }
+    });
+  });
+});
+
