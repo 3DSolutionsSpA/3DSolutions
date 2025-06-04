@@ -7,24 +7,24 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ======================
      2.1. Carrusel principal (Hero)
      ====================== */
-  const heroImages = document.querySelectorAll('.hero-carousel img');
+  const heroSlides = document.querySelectorAll('.hero-carousel img');
   let heroIndex = 0;
 
-  function showHeroImage(index) {
-    heroImages.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
+  function showHeroSlide(index) {
+    heroSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
     });
   }
 
-  function nextHeroImage() {
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    showHeroImage(heroIndex);
+  function nextHeroSlide() {
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    showHeroSlide(heroIndex);
   }
 
-  // Inicializar: mostrar la primera
-  if (heroImages.length > 0) {
-    showHeroImage(heroIndex);
-    setInterval(nextHeroImage, 5000); // Cambia cada 5 segundos
+  // Inicializar: mostrar la primera imagen
+  if (heroSlides.length > 0) {
+    showHeroSlide(heroIndex);
+    setInterval(nextHeroSlide, 5000); // Cambia cada 5 segundos
   }
 
   /* ======================
