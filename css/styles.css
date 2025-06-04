@@ -511,3 +511,78 @@ footer p {
   width: 40px;
   height: 40px;
 }
+
+/* -------------------------------------------------------
+   FOOTER - Secciones de contacto y enlaces
+   ------------------------------------------------------- */
+footer {
+  background-color: var(--color-primario-azul);
+  color: var(--color-fondo);
+  padding: 2rem 0 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h4 {
+  font-family: var(--font-secundaria);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-fondo);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.footer-section ul li a {
+  color: var(--color-fondo);
+  transition: var(--transition-suave);
+}
+.footer-section ul li a:hover {
+  color: var(--color-gris-claro);
+}
+
+/* Línea inferior de derechos reservados */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: var(--color-fondo);
+}
+
+/* -------------------------------------------------------
+   Responsive: en pantallas muy pequeñas, apilar verticalmente
+   ------------------------------------------------------- */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-section {
+    flex: 1 1 auto;
+  }
+}
