@@ -591,9 +591,13 @@ footer {
    Menú hamburguesa responsive
    ================================================== */
 
-/* 1) Estilos base para el botón hamburguesa */
+/* -------------------------------------------------------
+   Menú hamburguesa responsive
+   ------------------------------------------------------- */
+
+/* 1) El botón .nav-toggle se oculta en desktop, se muestra en móvil */
 .nav-toggle {
-  display: none; /* se mostrará solo en móvil */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -603,11 +607,9 @@ footer {
   cursor: pointer;
   padding: 0;
 }
-
 .nav-toggle:focus {
   outline: none;
 }
-
 .hamburger {
   display: block;
   width: 100%;
@@ -617,15 +619,15 @@ footer {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* 2) Ocultar enlaces por defecto en móvil */
+/* 2) En móvil (<768px), ocultamos .nav-links fuera del viewport */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 70px; /* debajo del header fijo */
+    top: 70px; /* justo debajo del header fijo */
     right: 0;
     background-color: var(--color-fondo);
     width: 200px;
-    transform: translateX(100%); /* fuera de la pantalla a la derecha */
+    transform: translateX(100%); /* inicialmente fuera de la pantalla */
     transition: transform 0.3s ease-in-out;
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 0 8px;
@@ -647,12 +649,12 @@ footer {
     display: flex;
   }
 
-  /* Cuando el menú esté “activo” (clase .nav-open en <nav>), desliza hacia la izquierda */
+  /* Cuando el <nav> tenga .nav-open, desliza .nav-links dentro del viewport */
   .nav-open .nav-links {
     transform: translateX(0);
   }
 
-  /* Animación icono: al abrirse, cruzar líneas */
+  /* Animación “X” del icono hamburguesa */
   .nav-open .hamburger:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
@@ -664,7 +666,7 @@ footer {
   }
 }
 
-/* En desktop, dejamos todo visible y el botón oculto */
+/* 3) En pantallas anchas (>768px), mostramos siempre .nav-links en horizontal */
 @media (min-width: 769px) {
   .nav-links {
     display: flex;
@@ -677,5 +679,9 @@ footer {
   }
   .nav-links li {
     margin: 0;
+  }
+  /* Aseguramos que el botón hamburguesa nunca aparezca en desktop */
+  .nav-toggle {
+    display: none;
   }
 }
