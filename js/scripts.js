@@ -1,12 +1,5 @@
-/* ========================================================================
-   js/scripts.js
-   Lógica para los carruseles en Home
-   ======================================================================== */
-
 document.addEventListener('DOMContentLoaded', function () {
-  /* ======================
-     2.1. Carrusel principal (Hero)
-     ====================== */
+  // 1. HERO carousel logic (unchanged)
   const heroSlides = document.querySelectorAll('.hero-carousel img');
   let heroIndex = 0;
 
@@ -21,15 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
     showHeroSlide(heroIndex);
   }
 
-  // Inicializar: mostrar la primera imagen
   if (heroSlides.length > 0) {
     showHeroSlide(heroIndex);
-    setInterval(nextHeroSlide, 5000); // Cambia cada 5 segundos
+    setInterval(nextHeroSlide, 5000);
   }
 
-  /* ======================
-     2.2. Carrusel de proyectos (Home)
-     ====================== */
+  // 2. Project carousel logic (unchanged)
   const projectImages = document.querySelectorAll('.project-carousel-wrapper img');
   let projectIndex = 0;
 
@@ -44,36 +34,35 @@ document.addEventListener('DOMContentLoaded', function () {
     showProjectImage(projectIndex);
   }
 
-  // Inicializar: mostrar la primera
   if (projectImages.length > 0) {
     showProjectImage(projectIndex);
-    setInterval(nextProjectImage, 4000); // Cambia cada 4 segundos
+    setInterval(nextProjectImage, 4000);
   }
 
-  /* ======================
-     2.3. Carrusel de logos (no necesita JS ya que se hace con CSS animado)
-     ====================== */
-  // Nota: la animación @keyframes scrollLogos en CSS desplaza automáticamente.
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  // … (carruseles u otro código que ya tengas)
-
-  // 3.1. Toggle menú hamburguesa
+  // 3. Hamburger menu toggle logic
   const nav = document.querySelector('nav.nav-wrapper');
   const toggleButton = document.querySelector('.nav-toggle');
 
-  toggleButton.addEventListener('click', () => {
-    nav.classList.toggle('nav-open');
-  });
+  if (nav && toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('nav-open');
+      // Update aria-expanded for accessibility
+      toggleButton.setAttribute('aria-expanded', isOpen);
+    });
+  }
 
-  // Cerrar menú al hacer clic en un enlace (solo en móvil)
+  // Close menu when a nav link is clicked (on mobile)
   const navLinks = document.querySelectorAll('.nav-links a');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (nav.classList.contains('nav-open')) {
+      if (nav && nav.classList.contains('nav-open')) {
         nav.classList.remove('nav-open');
+        if (toggleButton) {
+          toggleButton.setAttribute('aria-expanded', 'false');
+        }
       }
     });
   });
+
+  // No JS needed for logos carousel (uses CSS animation)
 });
