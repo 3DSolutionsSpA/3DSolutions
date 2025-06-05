@@ -194,6 +194,7 @@ header {
   gap: 4rem;
   width: max-content;
   animation: scrollLogos 20s linear infinite;
+  will-change: transform;
 }
 
 .logos-slider img {
@@ -457,16 +458,23 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: auto;
     min-height: 350px;
-    padding-top: 80px; /* para evitar que el header fijo lo tape */
+    padding-top: 80px;
+    padding-bottom: 32px;
   }
   .hero-content {
-    width: 95%;
-    max-width: none;
+    width: 100%;
+    max-width: 95vw;
     margin: 0 auto;
     padding: 16px;
     box-sizing: border-box;
+    left: 0;
+    right: 0;
+    position: relative;
+  }
+  .hero-carousel {
+    min-height: 250px;
   }
 
   .nav-links {
@@ -517,14 +525,14 @@ footer p {
 
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .hero-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
-  .hero-content .btn-primario {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+  .hero-content {
+    padding: 10px;
+    border-radius: 10px;
   }
   .project-carousel-wrapper {
     height: 30vh;
