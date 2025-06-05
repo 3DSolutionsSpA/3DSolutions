@@ -464,10 +464,7 @@ footer p {
   .hero-content {
     width: 95%;
     max-width: none;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto;
     padding: 16px;
     box-sizing: border-box;
   }
