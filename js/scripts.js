@@ -65,4 +65,33 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // No JS needed for logos carousel (uses CSS animation)
+
+  // Modal para ampliar imagen de proyecto en proyectos.html
+  const modal = document.getElementById('modal-img');
+  const modalImg = document.getElementById('modal-img-content');
+  const modalTitle = document.getElementById('modal-img-title');
+  const modalClose = document.getElementById('modal-close');
+  const projectImgs = document.querySelectorAll('.proyecto-img');
+
+  if (modal && modalImg && modalClose && projectImgs.length > 0) {
+    projectImgs.forEach(img => {
+      img.addEventListener('click', function() {
+        modal.style.display = 'flex';
+        modalImg.src = this.src;
+        modalTitle.textContent = this.getAttribute('data-title') || '';
+      });
+    });
+    modalClose.addEventListener('click', function() {
+      modal.style.display = 'none';
+      modalImg.src = '';
+      modalTitle.textContent = '';
+    });
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        modalImg.src = '';
+        modalTitle.textContent = '';
+      }
+    });
+  }
 });
