@@ -179,6 +179,7 @@ header {
 #logos {
   background-color: var(--color-gris-claro);
   padding: 2rem 0;
+  overflow: hidden;
 }
 
 .logos-container {
@@ -189,13 +190,14 @@ header {
 
 .logos-slider {
   display: flex;
+  align-items: center;
+  gap: 4rem;
   width: max-content;
   animation: scrollLogos 20s linear infinite;
 }
 
 .logos-slider img {
   height: 60px;
-  margin: 0 2rem;
   object-fit: contain;
   opacity: 0.9;
   transition: opacity 0.3s ease;
@@ -210,9 +212,7 @@ header {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-1 * ((200px + 4rem) * 5))); 
-    /* Suponiendo que cada logo ocupe aprox. 200px de ancho + márgenes, y 5 logos totales.
-       Ajusta el cálculo según el ancho real de tus logos y el número de ellos. */
+    transform: translateX(-50%);
   }
 }
 
@@ -462,9 +462,14 @@ footer p {
     padding-top: 80px; /* para evitar que el header fijo lo tape */
   }
   .hero-content {
-    max-width: 95%;
-    margin: 0 auto;
+    width: 95%;
+    max-width: none;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 16px;
+    box-sizing: border-box;
   }
 
   .nav-links {
