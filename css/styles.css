@@ -454,20 +454,48 @@ footer p {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* En un proyecto real, aquí pondrías tu menú hamburguesa */
+    position: absolute;
+    top: 70px; /* justo debajo del header fijo */
+    right: 0;
+    background-color: var(--color-fondo);
+    width: 200px;
+    transform: translateX(100%); /* inicialmente fuera de la pantalla */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 0 8px;
+    z-index: 1001;
+    display: block; /* <-- Add this to override display: none */
   }
-  .hero-content {
-    position: static;
-    transform: none;
-    padding: 2rem;
-    background: rgba(0,0,0,0.5);
-    margin-top: 2rem;
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
   }
-  #hero {
-    height: auto;
+  .nav-links li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--color-texto);
+    font-size: 1rem;
   }
-  .feature-card {
-    padding: 1.5rem 1rem;
+
+  /* Mostrar el botón hamburguesa */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Cuando el <nav> tenga .nav-open, desliza .nav-links dentro del viewport */
+  .nav-open .nav-links {
+    transform: translateX(0);
+  }
+
+  /* Animación “X” del icono hamburguesa */
+  .nav-open .hamburger:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .nav-open .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-open .hamburger:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 }
 
@@ -628,6 +656,7 @@ footer {
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 0 8px;
     z-index: 1001;
+    display: block; /* <-- Add this to override display: none */
   }
   .nav-links li {
     margin: 1rem 0;
