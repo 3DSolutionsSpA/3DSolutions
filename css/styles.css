@@ -453,6 +453,20 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    min-height: 350px;
+    padding-top: 80px; /* para evitar que el header fijo lo tape */
+  }
+  .hero-content {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
   .nav-links {
     position: absolute;
     top: 70px; /* justo debajo del header fijo */
