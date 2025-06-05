@@ -14,29 +14,24 @@
   <!-- ==========================
        1. HEADER / NAVBAR
        ========================== -->
- <header>
-  <nav class="nav-wrapper container">
-    <!-- 1) Logo -->
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="images/logo.png" alt="3D Solutions Logo" />
-      </a>
-    </div>
-
-    <!-- 2) Botón hamburguesa (solo visible en móvil) -->
-    <button class="nav-toggle" aria-label="Abrir menú">
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-    </button>
-
-    <!-- 3) Enlaces de navegación -->
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="proyectos.html">Proyectos</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+<header>
+<nav class="nav-wrapper container" role="navigation">
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="3D Solutions Logo" />
+    </a>
+  </div>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false">
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+    <span class="hamburger"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
 </header>
 
   <!-- ==========================
@@ -164,6 +159,6 @@
   <!-- ==========================
        8. SCRIPT CARRUSELES
        ========================== -->
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.js" defer></script>
 </body>
 </html>
