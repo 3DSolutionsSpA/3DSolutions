@@ -734,3 +734,40 @@ footer {
     display: none;
   }
 }
+
+/* --- Visual Enhancement: Animated Gradient Button for Engagement --- */
+.btn-primario, .btn-descarga, #contact-link-home a {
+  background: linear-gradient(90deg, var(--color-primario-azul), var(--color-primario-rojo));
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease-in-out infinite;
+  box-shadow: 0 4px 16px rgba(0,74,173,0.08);
+  border: none;
+}
+.btn-primario:hover, .btn-descarga:hover, #contact-link-home a:hover {
+  background-position: right center;
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(0,74,173,0.15);
+}
+@keyframes gradientMove {
+  0% { background-position: left center; }
+  50% { background-position: right center; }
+  100% { background-position: left center; }
+}
+
+/* --- Visual Enhancement: Card Hover Scale for Project Cards --- */
+.proyecto-card {
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+}
+.proyecto-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,74,173,0.12);
+}
+
+/* --- Visual Enhancement: Footer Social Icon Hover --- */
+.instagram-link .instagram-logo {
+  transition: transform 0.3s, filter 0.3s;
+}
+.instagram-link:hover .instagram-logo {
+  transform: scale(1.15) rotate(-8deg);
+  filter: brightness(1.2) drop-shadow(0 2px 8px #ff3131cc);
+}
