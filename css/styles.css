@@ -805,3 +805,27 @@ footer {
   color: #fff;
   box-shadow: 0 6px 24px rgba(0,74,173,0.15);
 }
+
+#ver-proyectos-home {
+  text-align: center;
+  margin: 2rem 0;
+}
+#ver-proyectos-home a {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  background: linear-gradient(90deg, var(--color-primario-azul), var(--color-primario-rojo));
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,74,173,0.08);
+  transition: background-position 0.4s, box-shadow 0.3s, color 0.3s;
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease-in-out infinite;
+}
+#ver-proyectos-home a:hover {
+  background-position: right center;
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(0,74,173,0.15);
+}
