@@ -10,6 +10,14 @@
   <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-60Z4HSBPVH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-60Z4HSBPVH');
+  </script>
 </head>
 <body>
   <!-- ==========================
@@ -196,8 +204,8 @@
           <li><strong>Email:</strong> <a href="mailto:3dsolutionsspa@gmail.com">3dsolutionsspa@gmail.com</a></li>
         </ul>
         <li>
-          <a href="https://instagram.com/3dsolutions.cl" target="_blank" aria-label="Instagram" style="display:inline-block; margin-top:8px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" style="height:28px;width:28px;vertical-align:middle;">
+          <a href="https://instagram.com/3dsolutions.cl" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" class="instagram-logo">
           </a>
         </li>
       </div>
@@ -217,5 +225,10 @@
     </div>
   </footer>
   <script src="js/scripts.js"></script>
+  <style>
+    /* Moved from inline to CSS file */
+    .instagram-link { display: inline-block; margin-top: 8px; }
+    .instagram-logo { height: 28px; width: 28px; vertical-align: middle; }
+  </style>
 </body>
 </html>
